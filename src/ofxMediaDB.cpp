@@ -142,5 +142,32 @@ ofxFontStash* ofxMediaDB::getFontStash(int ID){
 	}
 	return obj;
 }
+#endif
 
+// OPENAL SOUNDS /////////////////////////////////////////////////////////////////////////////////////
+#ifdef TARGET_OF_IPHONE
+
+void ofxMediaDB::addOALSound(ofxOpenALSoundPlayer* s, int ID){
+	
+	map<int,ofxOpenALSoundPlayer*>::iterator it = soundOALDB.find(ID);		
+	if ( it != soundOALDB.end() ){	//we already have one!!
+		delete soundOALDB[ID]; //delete / replace the old obj with that ID
+		printf( "ofxMediaDB addOALSound(): REPLACED OAL sound with ID: %d\n", ID );
+	}else{
+		printf( "ofxMediaDB addOALSound(): LOADED OAL sound with ID: %d\n", ID );		
+	}
+	soundOALDB[ID] = s;		
+}
+
+ofxOpenALSoundPlayer* ofxMediaDB::getOALSound(int ID){
+	
+	ofxOpenALSoundPlayer * obj = NULL;
+	map<int, ofxOpenALSoundPlayer*>::iterator it = soundOALDB.find(ID);		
+	if ( it == soundOALDB.end() ){	
+		printf( "ofxMediaDB getOALSound(): NO OAL SOUND FOUND with ID: %d\n", ID );
+	}else{
+		obj = soundOALDB[ID];
+	}
+	return obj;	
+}
 #endif
