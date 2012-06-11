@@ -7,6 +7,7 @@
 //set this to FALSE if you dont plan to include 
 //the ofxFontStash Addon to your project
 #define USING_FONTSTASH true 
+//https://github.com/armadillu/ofxFontStash
 
 #if USING_FONTSTASH 
 	#include "ofxFontStash.h"

@@ -14,9 +14,11 @@ example on how to handle textures:
 		bool didLoad1 = MEDIA_LOAD_TEXTURE("monkey.png", TEX_MONKEY);
 	}
 	
-	... meanwhile, in some other class …
+	... meanwhile, in some other class ...
 	
 	void draw(){	
 		//easily reach your textures from any file within your project
 		ofTexture * tex = MEDIA_GET_TEXURE(TEX_MONKEY);
 	}
+	
+same can be done with ofSoundPlayers, ofTrueTypeFont and ofxFontStash
