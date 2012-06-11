@@ -12,7 +12,7 @@
 #if USING_FONTSTASH 
 	#include "ofxFontStash.h"
 	//if you get a "Can't find ofxFontStash.h error, most likely you are not using the ofxFontStash addon
-	//to fic the error, just define USING_FONTSTASH as "FALSE" instead of "true" (3 lines above this one)
+	//to fix the error, just define USING_FONTSTASH as "false" instead of "true" (6 lines above this one)
 #endif
 
 
