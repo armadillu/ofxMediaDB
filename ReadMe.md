@@ -6,7 +6,7 @@ example on how to handle textures:
 	enum myTextureIDs{ 
 		TEX_MONKEY, 
 		TEX_BANANA,
-		etc…
+		etc...
 	};
 	
 	void setup(){
