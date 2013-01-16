@@ -68,7 +68,7 @@ void ofxMediaDB::addSound(ofSoundPlayer* s, int ID){
 		delete soundDB[ID]; //delete / replace the old obj with that ID
 		printf( "ofxMediaDB addSound(): REPLACED sound with ID: %d\n", ID );
 	}else{
-		printf( "ofxMediaDB addSound(): LOADED sound with ID: %d\n", ID );		
+		//printf( "ofxMediaDB addSound(): LOADED sound with ID: %d\n", ID );
 	}
 	soundDB[ID] = s;		
 }

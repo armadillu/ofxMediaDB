@@ -5,12 +5,12 @@
 #include "ofMain.h"
 #include <map>
 
-//set this to FALSE if you dont plan to include 
-//the ofxFontStash Addon to your project
-#define USING_FONTSTASH true 
+//define USING_FONTSTASH  in your project if you want to use ofxFontStash
+//#define USING_FONTSTASH
 //https://github.com/armadillu/ofxFontStash
 
-#if USING_FONTSTASH 
+
+#ifdef USING_FONTSTASH
 	#include "ofxFontStash.h"
 	//if you get a "Can't find ofxFontStash.h error, most likely you are not using the ofxFontStash addon
 	//to fix the error, just define USING_FONTSTASH as "false" instead of "true" (6 lines above this one)
@@ -35,7 +35,7 @@
 #define MEDIA_GET_OAL_SOUND(ID)						(ofxMediaDB::instance()->getOALSound(ID))
 #endif
 
-#if USING_FONTSTASH 
+#ifdef USING_FONTSTASH
 #define MEDIA_ADD_FONTSTASH(fontStashPtr,ID)	(ofxMediaDB::instance()->addFontStash(fontStashPtr,ID))
 #define MEDIA_GET_FONTSTASH(ID)					(ofxMediaDB::instance()->getFontStash(ID))
 #endif
