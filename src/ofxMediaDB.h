@@ -5,8 +5,7 @@
 #include "ofMain.h"
 #include <map>
 
-//define USING_FONTSTASH  in your project if you want to use ofxFontStash
-//#define USING_FONTSTASH
+//put USING_FONTSTASH in your project build settings "PreProcessor Macros" if you want to use ofxFontStash
 //https://github.com/armadillu/ofxFontStash
 
 
@@ -67,7 +66,7 @@ class ofxMediaDB{
 		#endif
 	
 		//ofxFontStash
-		#if USING_FONTSTASH 
+		#ifdef USING_FONTSTASH 
 		void addFontStash(ofxFontStash *, int ID);
 		ofxFontStash* getFontStash(int ID);	
 		#endif
@@ -81,7 +80,7 @@ class ofxMediaDB{
 		map<int, ofTrueTypeFont*> fontDB;
 		map<int, ofSoundPlayer*> soundDB;
 	
-		#if USING_FONTSTASH 
+		#ifdef USING_FONTSTASH 
 		map<int, ofxFontStash*> fontStashDB;
 		#endif
 	

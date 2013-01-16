@@ -117,7 +117,7 @@ ofTrueTypeFont* ofxMediaDB::getFont(int ID){
 
 // FONT_STASH ////////////////////////////////////////////////////////////////////////////////////////
 
-#if USING_FONTSTASH
+#ifdef USING_FONTSTASH
 void ofxMediaDB::addFontStash(ofxFontStash* f, int ID){
 	
 	map<int,ofxFontStash*>::iterator it = fontStashDB.find(ID);
